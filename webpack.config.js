@@ -11,18 +11,19 @@ module.exports = ({ portal, autoupload }) => ({
 
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "js/[name].js",
+    filename: "js/index.js",
   },
 
   optimization: {
-    minimizer: [`...`, new CssMinimizerPlugin()],
-    // minimize: false,
+    minimizer: [`...`, new CssMinimizerPlugin({
+      exclude: /\/tools/
+    })],
   },
 
   module: {
     rules: [
       {
-        test: /tailwind\.css$/,
+        test: /((?![_macros|main|theme-overrides]))\.css$/,
         include: path.resolve(__dirname, "src"),
         use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
