@@ -1,13 +1,13 @@
-defaultPortal: hubspot-ones-cms
+defaultPortal: hubspot-ones-theme
 portals:
-  - name: hubspot-ones-cms
+  - name: hubspot-ones-theme
     portalId: 22593806
     authType: personalaccesskey
     auth:
       tokenInfo:
         accessToken: >-
-          CPiskdKuMBIJAA0AAAAA4A0DGI6C4wog1eegFiju6QwyFC689IRqwSEIn3kBGI-2eVmrvvKyOjcAAARBAAAAeAAAAAAAAAAAAAAAAAAAAAQAAMAHAP7_MTwAAAYAAABgAAAAAAAAAAAAAAAAADACQhTq5F7G8r3dJRu9-rL3xEFmnaKF30oDbmExUgBaAA
-        expiresAt: '2022-08-29T15:42:03.388Z'
+          COXN5vKuMBIJAA0AAAAA4A0DGI6C4wog1eegFiju6QwyFBosgFwFSLmw_syJiRmrrAtFzxXLOjcAAARBAAAAeAAAAAAAAAAAAAAAAAAAAAQAAMAHAP7_MTwAAAYAAABgAAAAAAAAAAAAAAAAADACQhTZu4oGW_YVa9nrRBffjlyJNvkQwkoDbmExUgBaAA
+        expiresAt: '2022-08-30T10:43:49.095Z'
     personalAccessKey: >-
       CiRiMjcwYzEzZC1kOTI2LTQ0ZWItYmI2YS03YjJlOTJkYTQ4YTcQjoLjChjV56AWKhkABeaRgmLqzKev8VcGIazHMzgnGKK-L-ajSgNuYTE
     sandboxAccountType: null
