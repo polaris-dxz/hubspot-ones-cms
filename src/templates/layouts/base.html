@@ -8,6 +8,7 @@
     {% if page_meta.html_title or pageTitle %}<title>{{ page_meta.html_title or pageTitle }}</title>{% endif %}
     {% if site_settings.favicon_src %}<link rel="shortcut icon" href="{{ site_settings.favicon_src }}" />{% endif %}
     <meta name="description" content="{{ page_meta.meta_description }}">
+    {{ require_css(get_asset_url("../../css/main.css")) }}
     {{ require_css(get_asset_url("../../css/tools/main.css")) }}
     {# This is intended to be used if a template requires template specific style sheets #}
     {% if template_css %}
@@ -18,7 +19,7 @@
     {{ standard_header_includes }}
   </head>
   <body>
-    <div class="body-wrapper {{ builtin_body_classes }}">
+    <div class="body-wrapper text-base antialiased text-gray-700 bg-white font-body {{ builtin_body_classes }}">
       {% block header %}
         {% global_partial path="../partials/header.html" %}
       {% endblock header %}
@@ -34,7 +35,8 @@
         {% global_partial path="../partials/footer.html" %}
       {% endblock footer %}
     </div>
-    {{ require_js(get_asset_url("../../js/main.js")) }}
+    {{ require_js(get_asset_url('../../js/main.js')) }}
+    {{ require_js(get_asset_url('../../js/index.js')) }}
     {# To see a full list of what is included via standard_footer_includes please reference this article: https://developers.hubspot.com/docs/cms/hubl/variables#required-page-template-variables #}
     {{ standard_footer_includes }}
   </body>
