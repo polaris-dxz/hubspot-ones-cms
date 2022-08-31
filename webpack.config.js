@@ -7,11 +7,11 @@ const CopyWebpackPlugin = require("copy-webpack-plugin");
 module.exports = ({ portal, autoupload }) => ({
   mode: "production",
 
-  entry: "./src/index.js",
+  entry: "./src/js/main.js",
 
   output: {
     path: path.resolve(__dirname, "dist"),
-    filename: "js/index.js",
+    filename: "js/[name].js",
   },
 
   optimization: {
@@ -23,7 +23,7 @@ module.exports = ({ portal, autoupload }) => ({
   module: {
     rules: [
       {
-        test: /((?![_macros|main|theme-overrides]))\.css$/,
+        test: /\.css$/,
         include: path.resolve(__dirname, "src"),
         use: [MiniCssExtractPlugin.loader, "css-loader", "postcss-loader"],
       },
@@ -47,8 +47,8 @@ module.exports = ({ portal, autoupload }) => ({
         { from: "src/images", to: "images" },
         { from: "src/templates", to: "templates" },
         { from: "src/modules", to: "modules" },
-        { from: "src/css", to: "css" },
         { from: "src/js", to: "js" }, 
+        // { from: "src/css", to: "css" },
         { from: "src/sections", to: "sections" },
         { from: "src/fields.json", to: "fields.json" },
         { from: "src/license.txt", to: "license.txt" },
