@@ -35,7 +35,7 @@ module.exports = ({ portal, autoupload }) => ({
       portal,
       autoupload,
       src: "dist",
-      dest: "hubspot-ones-theme",
+      dest: "ones-hubspot-theme",
     }),
 
     new MiniCssExtractPlugin({

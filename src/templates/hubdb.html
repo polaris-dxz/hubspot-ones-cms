@@ -23,11 +23,11 @@
 {# Testing/production logic #}
 
 {% if testing %}
-  {% set table_id = testing_table_id %}
+  {% set table_id = ones_blog %}
   {% set row = hubdb_table_row( table_id, testing_row_id ) %}
   {% set page_level = testing_page_level %}
 {% else %}
-  {% set table_id = dynamic_page_hubdb_table_id %}
+  {% set table_id = ones_blog %}
   {% set row = dynamic_page_hubdb_row %}
   {% set page_level = dynamic_page_route_level %}
 {% endif %}

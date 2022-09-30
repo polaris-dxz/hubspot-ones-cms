@@ -1,13 +1,13 @@
 {
-  "name": "hubspot-ones-theme",
+  "name": "ones-hubspot-theme",
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
   "scripts": {
     "build": "rm -rf dist && webpack --mode production",
-    "deploy": "rm -rf dist && webpack --mode production && hs upload dist hubspot-ones-theme",
+    "deploy": "rm -rf dist && webpack --mode production && hs upload dist ones-hubspot-theme",
     "start": "rm -rf dist && webpack --watch --mode production --env autoupload",
-    "upload": "hs upload dist hubspot-ones-theme"
+    "upload": "hs upload dist ones-hubspot-theme"
   },
   "devDependencies": {
     "@hubspot/cli": "^3.0.6",
